@@ -12,6 +12,9 @@ public class Application {
     public static void main(String[] args) {
 
         ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
+        SomeOtherService other = ctx.getBean(SomeOtherService.class);
+        other.test();
+
         TheService service = ctx.getBean(TheService.class);
 
         new Thread(() -> {
