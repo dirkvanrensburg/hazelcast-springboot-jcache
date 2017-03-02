@@ -1,6 +1,6 @@
 ## Demo
 
-This repository demonstrates the use of Hazelcast as the cache provider for JCache in a Spring boot REST application.
+This repository demonstrates an issue when using Hazelcast as the cache provider for JCache in a Spring boot REST application.
 
 One hazelcast cache called `testCache` is configured in the `hazelcast.xml` file. This cache is set up to expire entries 
 after one minute. 
@@ -108,9 +108,16 @@ Now it works and there is only one cache manager. The entry is placed in a `cach
 using the `hazelcast-client-default.xml` and fails because there is no running cluster
 
 
-## Questions
+## Solution
 
-* Is there a way to get spring auto configuration to only start one Hazelcast instance?
+Setting the property `spring.hazelcast.config=hazelcast.xml` in the `application.properties` file and naming the instance
+in the `hazelcast.xml` file allows the Spring auto configuration know what configuration to use when finding the Hazelcast instance.
+
+For a clean minimal solution see the [fixed](https://github.com/dirkvanrensburg/hazelcast-springboot-jcache/tree/fixed) branch of this repository
+
+see issues: 
+* https://github.com/hazelcast/hazelcast/issues/10007
+* https://github.com/spring-projects/spring-boot/issues/8467
 
 
         
