@@ -1,6 +1,8 @@
 ## Demo
 
-This repository demonstrates an issue when using Hazelcast as the cache provider for JCache in a Spring boot REST application.
+This repository demonstrates an issue when using Hazelcast as the cache provider for JCache in a Spring boot REST application. 
+
+It exists because of this [stackoverflow thread](http://stackoverflow.com/questions/42151600/hazelcast-and-jcache-in-spring-boot-creates-two-instances/42285148#42285148)
 
 One hazelcast cache called `testCache` is configured in the `hazelcast.xml` file. This cache is set up to expire entries 
 after one minute. 
@@ -118,6 +120,7 @@ For a clean minimal solution see the [fixed](https://github.com/dirkvanrensburg/
 see issues: 
 * https://github.com/hazelcast/hazelcast/issues/10007
 * https://github.com/spring-projects/spring-boot/issues/8467
+* https://github.com/hazelcast/hazelcast/pull/9973
 
 
         
