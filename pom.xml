@@ -21,7 +21,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <snippetsDirectory>${project.build.directory}/generated-snippets</snippetsDirectory>
-        <hazelcast.version>3.7.5</hazelcast.version>
     </properties>
 
     <dependencies>
@@ -39,22 +38,11 @@
             <version>1.0.0</version>
         </dependency>
 
-        <!-- HAZELCAST -->
-        <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast-spring</artifactId>
-            <version>${hazelcast.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.hazelcast</groupId>-->
-            <!--<artifactId>hazelcast-all</artifactId>-->
-            <!--<version>${hazelcast.version}</version>-->
-        <!--</dependency>-->
+
     </dependencies>
 
     <build>

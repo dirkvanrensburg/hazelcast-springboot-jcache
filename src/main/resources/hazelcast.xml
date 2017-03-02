@@ -6,7 +6,7 @@
         <password>dev-pass</password>
     </group>
 
-    <!--<instance-name>testCluster</instance-name>-->
+    <instance-name>testCluster</instance-name>
 
     <management-center enabled="true">http://localhost:8083/mancenter</management-center>
 
